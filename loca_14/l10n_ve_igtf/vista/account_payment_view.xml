@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="herencia_anticipo" model="ir.ui.view">
+    <!--record id="herencia_anticipo" model="ir.ui.view">
         <field name="name">herencia.anticipo</field>
         <field name="model">account.payment</field>
         <field name="inherit_id" ref="account.view_account_payment_form"/>
@@ -10,7 +10,7 @@
                 <field name="anticipo" string="El pago es un Anticipo?" widget="boolean_toggle"/>
             </xpath>
         </field>
-    </record>
+    </record-->
 
 
     <record id="vista_arbol_pagos" model="ir.ui.view">
