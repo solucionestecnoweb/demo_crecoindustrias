@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+    
         <record id="acc_move_muni_tax_view_form_deli" model="ir.ui.view">
         <field name="name">account.move.form.deli</field>
         <field name="model">account.move</field>
@@ -11,11 +12,11 @@
                
                 </xpath>
 
-                <!--xpath expr="//field[@name='doc_currency_id']" position="after">
-                    <field name="route_id" attrs="{'invisible':[('company_id', 'not in', 3)]}"/>
-                </xpath-->
+                <xpath expr="//field[@name='doc_currency_id']" position="after">
+                    <field name="route_id"/>
+                </xpath>
 
             </field>
         </record>
-    </data>
+    
 </odoo>
