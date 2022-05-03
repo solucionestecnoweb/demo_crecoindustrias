@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+import logging
+from odoo import api, fields, models, _ 
+from odoo.exceptions import UserError, ValidationError
+
+_logger = logging.getLogger('__name__')
 
 
 class AccountMove(models.Model):
