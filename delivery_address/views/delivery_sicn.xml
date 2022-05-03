@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <record id="view_delivery_sicn_form" model="ir.ui.view">
+            <field name="name">view.delivery.sicn.form</field>
+            <field name="model">delivery.sicn</field>
+            <field name="arch" type="xml">
+                <form string="Rutas">
+                    <sheet>
+                        <group col="4">
+                            <!-- <group> -->
+                                <field name="name"/>
+                                <field name="code"/>
+                                <field name="description"/>
+                            <!-- </group> -->
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_delivery_sicn_tree" model="ir.ui.view">
+            <field name="name">view.delivery.sicn.tree</field>
+            <field name="model">delivery.sicn</field>
+            <field name="arch" type="xml">
+                <tree string="Rutas">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_delivery_sicn" model="ir.actions.act_window">
+            <field name="name">Delivery sicn</field>
+            <field name="res_model">delivery.sicn</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+<!--         <menuitem
+            id="menu_delivery_sicn"
+            name="Ruta"
+            parent="sale.menu_sales_config"
+            action="action_delivery_sicn"
+            sequence="3"/> -->
+
+            <menuitem
+            id="menu_delivery_sicn_account"
+            name="Sicn"
+            parent="account.menu_account_config"
+            action="action_delivery_sicn"
+            sequence="3"/>
+    </data>
+</odoo>

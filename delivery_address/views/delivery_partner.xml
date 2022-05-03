@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+      <record id="view_partner_delivery_address_form2" model="ir.ui.view">
+        <field name="name">view.partner.delivery.address.form2</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"></field>
+        <field name="arch" type="xml">
+
+          <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[2]/field[@name='mobile']" position="after">
+            <field name="sicn_id" attrs="{'invisible': [('type', 'in',('contact','invoice','other','private'))]}"/>
+            <!-- <field name="ruta" attrs="{'invisible': [('type', 'in',('contact','invoice','other','private'))]}"/> -->
+          </xpath>
+        </field>
+      </record>
+    </data>
+</odoo>

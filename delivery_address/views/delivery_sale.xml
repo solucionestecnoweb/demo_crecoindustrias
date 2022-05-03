@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+      <record id="view_sale_delivery_address_form" model="ir.ui.view">
+        <field name="name">view.sale.delivery.address.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"></field>
+        <field name="arch" type="xml">
+
+        <xpath expr="//field[@name='payment_term_id']" position="after">
+          <field name="route_id" attrs="{'invisible':[('company_id', 'not in', 3)]}"/>
+        </xpath>
+
+        </field>
+      </record>
+  </data>
+</odoo>
