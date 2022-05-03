@@ -12,4 +12,4 @@ class AccountMove(models.Model):
 class AccountMoveLine(models.Model):
     _inherit = 'account.move.line'
 
-    prueba = fields.Char(string='Prueba', store=True)
+    prueba = fields.Selection([('a', 'A'),('b', 'B')])
