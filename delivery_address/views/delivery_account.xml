@@ -1,16 +1,18 @@
 <odoo>
     <data>
-        <record id="view_account_delivery_address_form" model="ir.ui.view">
-            <field name="name">view.account.delivery.address.form2</field>
-            <field name="model">account.move</field>
-            <field name="inherit_id" ref="account.view_move_form"></field>
-            <field name="arch" type="xml">
+        <record id="acc_move_muni_tax_view_form_deli" model="ir.ui.view">
+        <field name="name">account.move.form.deli</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+
+                <xpath expr="//field[@name='invoice_line_ids']/tree//field[@name='tax_ids']" position="before">
+                
+                    <field name="prueba" force_save="1"/>
+               
+                </xpath>
 
                 <xpath expr="//field[@name='doc_currency_id']" position="after">
                     <field name="route_id" attrs="{'invisible':[('company_id', 'not in', 3)]}"/>
-                </xpath>
-                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='invoice_line_ids']/tree[1]/field[@name='product_id']" position="after">
-                    <field name="prueba" force_save="1"/>
                 </xpath>
 
             </field>
